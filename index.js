@@ -18,24 +18,24 @@ window.addEventListener("keydown", (e) => {
     villain.appendChild(laser);
 
     var movelaser = setInterval(() => {
-      var rocks = document.getElementsByClassName("rocks");
+      var guns = document.getElementsByClassName("guns");
 
-      for (var i = 0; i < rocks.length; i++) {
-        var rock = rocks[i];
-        if (rock != undefined) {
-          var rockbound = rock.getBoundingClientRect();
+      for (var i = 0; i < guns.length; i++) {
+        var gun = guns[i];
+        if (gun != undefined) {
+          var gunbound = gun.getBoundingClientRect();
           var laserbound = laser.getBoundingClientRect();
 
-          //Condition to check whether the rock/rock and the laser are at the same position..!
-          //If so,then we have to destroy that rock
+          //Condition to check whether the gun and the laser are at the same position..!
+          //If so,then we have to destroy that gun
 
           if (
-            laserbound.left >= rockbound.left &&
-            laserbound.right <= rockbound.right &&
-            laserbound.top <= rockbound.top &&
-            laserbound.bottom <= rockbound.bottom
+            laserbound.left >= gunbound.left &&
+            laserbound.right <= gunbound.right &&
+            laserbound.top <= gunbound.top &&
+            laserbound.bottom <= gunbound.bottom
           ) {
-            rock.parentElement.removeChild(rock); //Just removing that particular rock;
+            gun.parentElement.removeChild(gun); //Just removing that particular gun;
             //Score
             document.getElementById("points").innerHTML =
               parseInt(document.getElementById("points").innerHTML) + 1;
@@ -57,37 +57,37 @@ window.addEventListener("keydown", (e) => {
   }
 });
 
-var generaterocks = setInterval(() => {
-  var rock = document.createElement("div");
-  rock.classList.add("rocks");
-  //Just getting the left of the rock to place it in random position...
-  var rockleft = parseInt(
-    window.getComputedStyle(rock).getPropertyValue("left")
+var generateguns = setInterval(() => {
+  var gun = document.createElement("div");
+  gun.classList.add("guns");
+  //Just getting the left of the gun to place it in random position...
+  var gunleft = parseInt(
+    window.getComputedStyle(gun).getPropertyValue("left")
   );
-  //generate value between 0 to 450 where 450 => villain width - rock width
-  rock.style.left = Math.floor(Math.random() * 450) + "px";
+  //generate value between 0 to 450 where 450 => villain width - gun width
+  gun.style.left = Math.floor(Math.random() * 450) + "px";
 
-  villain.appendChild(rock);
+  villain.appendChild(gun);
 }, 1000);
 
-var moverocks = setInterval(() => {
-  var rocks = document.getElementsByClassName("rocks");
+var moveguns = setInterval(() => {
+  var guns = document.getElementsByClassName("guns");
 
-  if (rocks != undefined) {
-    for (var i = 0; i < rocks.length; i++) {
-      //Now I have to increase the top of each rock,so that the rocks can move downwards..
-      var rock = rocks[i]; //getting each rock
-      var rocktop = parseInt(
-        window.getComputedStyle(rock).getPropertyValue("top")
+  if (guns != undefined) {
+    for (var i = 0; i < guns.length; i++) {
+      //Now I have to increase the top of each gun,so that the guns can move downwards..
+      var gun = guns[i]; //getting each gun
+      var guntop = parseInt(
+        window.getComputedStyle(gun).getPropertyValue("top")
       );
-      //475 => villainheight - rockheight + 25
-      if (rocktop >= 475) {
+      //475 => villainheight - gunheight + 25
+      if (guntop >= 475) {
         alert("Game Over");
-        clearInterval(moverocks);
+        clearInterval(moveguns);
         window.location.reload();
       }
 
-      rock.style.top = rocktop + 25 + "px";
+      gun.style.top = guntop + 25 + "px";
     }
   }
 }, 450);
