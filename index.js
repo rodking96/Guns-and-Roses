@@ -26,8 +26,8 @@ window.addEventListener("keydown", (e) => {
           var gunbound = gun.getBoundingClientRect();
           var laserbound = laser.getBoundingClientRect();
 
-          //Condition to check whether the gun and the laser are at the same position..!
-          //If so,then we have to destroy that gun
+          //Check whether the gun and the laser are at the same position
+          //If so,destroy the guns
 
           if (
             laserbound.left >= gunbound.left &&
@@ -75,7 +75,7 @@ var moveguns = setInterval(() => {
 
   if (guns != undefined) {
     for (var i = 0; i < guns.length; i++) {
-      //Now I have to increase the top of each gun,so that the guns can move downwards..
+      //Now I have to increase the top of each gun,so that the guns can move downwards
       var gun = guns[i]; //getting each gun
       var guntop = parseInt(
         window.getComputedStyle(gun).getPropertyValue("top")
