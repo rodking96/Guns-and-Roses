@@ -51,7 +51,7 @@ window.addEventListener("keydown", (e) => {
         clearInterval(movelaser);
       }
 
-      laser.style.left = left + "px"; //laser should always be placed at the top of my rose..!
+      laser.style.left = left + "px"; //laser should always be placed at the top of my gun
       laser.style.bottom = laserbottom + 3 + "px";
     });
   }
@@ -60,7 +60,7 @@ window.addEventListener("keydown", (e) => {
 var generateroses = setInterval(() => {
   var rose = document.createElement("div");
   rose.classList.add("roses");
-  //Just getting the left of the rose to place it in random position...
+  //Just getting the left of the rose to place it in random position
   var roseleft = parseInt(
     window.getComputedStyle(rose).getPropertyValue("left")
   );
