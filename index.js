@@ -93,12 +93,9 @@ var moveroses = setInterval(() => {
 }, 450);
 
 // We'll use these variables to track the counts of each player
-let gb = 0      // Player 1
-let cc = 0      // Player 2
-let sugar = 0   // Player 3
-
-// Code to update name display 
-// document.getElementById('credit').textContent = `Created by ${yourName}`
+let gb = 0      // Ginger Bread
+let cc = 0      // Beer
+let sugar = 0   // Apple
 
 // Event listener for clicks on the "+" button for Ginger Bread cookies
 document.getElementById('add-gb').addEventListener('click', function () {
