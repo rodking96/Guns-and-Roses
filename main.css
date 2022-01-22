@@ -1,6 +1,12 @@
 body {
     width: 100%;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    min-height: 100vh;
+    position:relative;
+    color: rgb(2, 2, 2);
     background: rgb(0, 0, 0);
     background-size: cover;
 }
@@ -54,4 +60,83 @@ body {
     opacity: 0.7;
     font-size: 10em;
     color: rgb(252, 252, 252);
+}
+
+section {
+    border: 1px dashed rgb(3, 3, 3);
+    padding: 1px;
+}
+
+section .menu {
+    display: inline-block;
+    border: 1px solid rgb(3, 3, 3);
+    padding: 1px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 1px;
+    height: 1px;
+}
+
+/* Text Styles */
+h1 {
+    color: rgb(253, 252, 252);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 0.6em;
+    background-color: rgb(2, 2, 2);
+    display: inline-block;
+    border: 1px solid rgb(5, 5, 5);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+h3 {
+    font-size: 0.4em;
+    margin: 1px;
+} 
+
+/* Table Styles */
+table {
+    border: 1px solid rgb(247, 5, 5);
+    margin: 0 auto;
+    margin-bottom: 5vh;
+}
+
+th {
+    background-color: rgb(250, 3, 3);
+}
+
+td {
+    background-color: rgb(252, 5, 5);
+}
+
+th, 
+td {
+    padding: 3px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+/* Button Styles */
+button {
+    color: rgb(5, 5, 5);
+    background-color: rgb(248, 247, 245);
+    font-size: 0.5em;
+}
+
+/* Footer Styles */
+footer {
+    position: sticky;
+    width: 100%;
+    height: 5px;
+    bottom: 0;
+    padding: 5px 0;
+    background-color: rgb(3, 3, 3);
+}
+
+body::after {
+    display: block;
+    height: 5px;
 }

@@ -68,7 +68,7 @@ var generateroses = setInterval(() => {
   rose.style.left = Math.floor(Math.random() * 450) + "px";
 
   villain.appendChild(rose);
-}, 1000);
+}, 2100);
 
 var moveroses = setInterval(() => {
   var roses = document.getElementsByClassName("roses");
@@ -91,3 +91,54 @@ var moveroses = setInterval(() => {
     }
   }
 }, 450);
+
+// We'll use these variables to track the counts of each player
+let gb = 0      // Player 1
+let cc = 0      // Player 2
+let sugar = 0   // Player 3
+
+// Code to update name display 
+// document.getElementById('credit').textContent = `Created by ${yourName}`
+
+// Event listener for clicks on the "+" button for Ginger Bread cookies
+document.getElementById('add-gb').addEventListener('click', function () {
+    gb += 1;
+    document.getElementById('qty-gb').textContent = gb;
+    document.getElementById('qty-total').textContent = (gb + cc + sugar);
+})
+
+document.getElementById('minus-gb').addEventListener('click', function () {
+    if (gb >= 1) {
+        gb -= 1;
+        document.getElementById('qty-gb').textContent = gb;
+        document.getElementById('qty-total').textContent = (gb + cc + sugar);
+    }
+})
+
+document.getElementById('add-cc').addEventListener('click', function () {
+    cc += 1;
+    document.getElementById('qty-cc').textContent = cc;
+    document.getElementById('qty-total').textContent = (gb + cc + sugar);
+})
+
+document.getElementById('minus-cc').addEventListener('click', function () {
+    if (cc >= 1) {
+        cc -= 1;
+        document.getElementById('qty-cc').textContent = cc;
+        document.getElementById('qty-total').textContent = (gb + cc + sugar);
+    }
+})
+
+document.getElementById('add-sugar').addEventListener('click', function () {
+    sugar += 1;
+    document.getElementById('qty-sugar').textContent = sugar;
+    document.getElementById('qty-total').textContent = (gb + cc + sugar);
+})
+
+document.getElementById('minus-sugar').addEventListener('click', function () {
+    if (sugar >= 1) {
+        sugar -= 1;
+        document.getElementById('qty-sugar').textContent = sugar;
+        document.getElementById('qty-total').textContent = (gb + cc + sugar);
+    }
+})
