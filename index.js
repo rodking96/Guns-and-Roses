@@ -1,3 +1,52 @@
+// We'll use these variables to track the counts of each player
+let gb = 0      // Ginger Bread
+let cc = 0      // Beer
+let sugar = 0   // Apple
+
+// Event listener for clicks on the "+" button for Ginger Bread cookies
+document.getElementById('add-gb').addEventListener('click', function () {
+    gb += 1;
+    document.getElementById('qty-gb').textContent = gb;
+    document.getElementById('qty-total').textContent = (gb + cc + sugar);
+})
+
+document.getElementById('minus-gb').addEventListener('click', function () {
+    if (gb >= 1) {
+        gb -= 1;
+        document.getElementById('qty-gb').textContent = gb;
+        document.getElementById('qty-total').textContent = (gb + cc + sugar);
+    }
+})
+
+document.getElementById('add-cc').addEventListener('click', function () {
+    cc += 1;
+    document.getElementById('qty-cc').textContent = cc;
+    document.getElementById('qty-total').textContent = (gb + cc + sugar);
+})
+
+document.getElementById('minus-cc').addEventListener('click', function () {
+    if (cc >= 1) {
+        cc -= 1;
+        document.getElementById('qty-cc').textContent = cc;
+        document.getElementById('qty-total').textContent = (gb + cc + sugar);
+    }
+})
+
+document.getElementById('add-sugar').addEventListener('click', function () {
+    sugar += 1;
+    document.getElementById('qty-sugar').textContent = sugar;
+    document.getElementById('qty-total').textContent = (gb + cc + sugar);
+})
+
+document.getElementById('minus-sugar').addEventListener('click', function () {
+    if (sugar >= 1) {
+        sugar -= 1;
+        document.getElementById('qty-sugar').textContent = sugar;
+        document.getElementById('qty-total').textContent = (gb + cc + sugar);
+    }
+})
+
+
 var hero = document.getElementById("hero");
 var villain = document.getElementById("villain");
 
@@ -91,51 +140,3 @@ var moveroses = setInterval(() => {
     }
   }
 }, 450);
-
-// We'll use these variables to track the counts of each player
-let gb = 0      // Ginger Bread
-let cc = 0      // Beer
-let sugar = 0   // Apple
-
-// Event listener for clicks on the "+" button for Ginger Bread cookies
-document.getElementById('add-gb').addEventListener('click', function () {
-    gb += 1;
-    document.getElementById('qty-gb').textContent = gb;
-    document.getElementById('qty-total').textContent = (gb + cc + sugar);
-})
-
-document.getElementById('minus-gb').addEventListener('click', function () {
-    if (gb >= 1) {
-        gb -= 1;
-        document.getElementById('qty-gb').textContent = gb;
-        document.getElementById('qty-total').textContent = (gb + cc + sugar);
-    }
-})
-
-document.getElementById('add-cc').addEventListener('click', function () {
-    cc += 1;
-    document.getElementById('qty-cc').textContent = cc;
-    document.getElementById('qty-total').textContent = (gb + cc + sugar);
-})
-
-document.getElementById('minus-cc').addEventListener('click', function () {
-    if (cc >= 1) {
-        cc -= 1;
-        document.getElementById('qty-cc').textContent = cc;
-        document.getElementById('qty-total').textContent = (gb + cc + sugar);
-    }
-})
-
-document.getElementById('add-sugar').addEventListener('click', function () {
-    sugar += 1;
-    document.getElementById('qty-sugar').textContent = sugar;
-    document.getElementById('qty-total').textContent = (gb + cc + sugar);
-})
-
-document.getElementById('minus-sugar').addEventListener('click', function () {
-    if (sugar >= 1) {
-        sugar -= 1;
-        document.getElementById('qty-sugar').textContent = sugar;
-        document.getElementById('qty-total').textContent = (gb + cc + sugar);
-    }
-})
