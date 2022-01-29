@@ -25,7 +25,7 @@ window.addEventListener("keydown", (e) => {
       for (var i = 0; i < roses.length; i++) {
         var rose = roses[i];
         if (rose != undefined) {
-          var rosebound = rose.getBoundingClientRect();
+          var rosebound = rose.getBoundingClientRect();//Element.getBoundingClientRect() - Web APIs | MDN:size of an element and position relative to viewport.
           var laserbound = laser.getBoundingClientRect();
 
           //Check whether the rose and the laser are at the same position
