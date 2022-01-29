@@ -4,8 +4,9 @@ Guns and Roses
 
 Game Rules
 
-    -Basic gameplay: The player controls the gun at the bottom of the screen, which can move only horizontally. 
-    The roses moves downwards(randomly). If a rose is shot by the gun, it is destroyed and you get 1 point/kill. 
+    -Basic gameplay: The player controls the gun at the bottom of the screen, 
+    which can move only horizontally. The roses moves downwards(randomly). 
+    If a rose is shot by the gun, it is destroyed and you get 1 point/kill. 
     You can choose a character(Soccer Ball, OJ, and Apple).   
 
 Controls
