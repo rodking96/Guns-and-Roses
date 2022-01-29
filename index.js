@@ -1,54 +1,7 @@
-// We'll use these variables to track the counts of each player
-let gb = 0      // Soccer Ball
-let cc = 0      // Beer
-let apple = 0   // Apple
+/////KeyboardEvent.key - Web APIs | MDN
 
-// Event listener for clicks on the "+" button for Ginger Bread cookies
-document.getElementById('add-gb').addEventListener('click', function () {
-    gb += 1;
-    document.getElementById('qty-gb').textContent = gb;
-    document.getElementById('qty-total').textContent = (gb + cc + apple);
-})
-
-document.getElementById('minus-gb').addEventListener('click', function () {
-    if (gb >= 1) {
-        gb -= 1;
-        document.getElementById('qty-gb').textContent = gb;
-        document.getElementById('qty-total').textContent = (gb + cc + apple);
-    }
-})
-
-document.getElementById('add-cc').addEventListener('click', function () {
-    cc += 1;
-    document.getElementById('qty-cc').textContent = cc;
-    document.getElementById('qty-total').textContent = (gb + cc + apple);
-})
-
-document.getElementById('minus-cc').addEventListener('click', function () {
-    if (cc >= 1) {
-        cc -= 1;
-        document.getElementById('qty-cc').textContent = cc;
-        document.getElementById('qty-total').textContent = (gb + cc + apple);
-    }
-})
-
-document.getElementById('add-apple').addEventListener('click', function () {
-  apple += 1;
-    document.getElementById('qty-apple').textContent = apple;
-    document.getElementById('qty-total').textContent = (gb + cc + apple);
-})
-
-document.getElementById('minus-apple').addEventListener('click', function () {
-    if (apple >= 1) {
-      apple -= 1;
-        document.getElementById('qty-apple').textContent = apple;
-        document.getElementById('qty-total').textContent = (gb + cc + apple);
-    }
-})
-
-
-var hero = document.getElementById("hero");
-var villain = document.getElementById("villain");
+var hero = document.getElementById("hero"); //Gun
+var villain = document.getElementById("villain"); // Box
 
 window.addEventListener("keydown", (e) => {
   var left = parseInt(window.getComputedStyle(hero).getPropertyValue("left"));
@@ -85,7 +38,7 @@ window.addEventListener("keydown", (e) => {
             laserbound.bottom <= rosebound.bottom
           ) {
             rose.parentElement.removeChild(rose); //Just removing that particular rose;
-            //Score
+            //Score Points
             document.getElementById("points").innerHTML =
               parseInt(document.getElementById("points").innerHTML) + 1;
           }
@@ -100,7 +53,7 @@ window.addEventListener("keydown", (e) => {
         clearInterval(movelaser);
       }
 
-      laser.style.left = left + "px"; //laser should always be placed at the top of my gun
+      laser.style.left = left + "px"; //laser should always be placed at the top of the gun
       laser.style.bottom = laserbottom + 3 + "px";
     });
   }
@@ -140,3 +93,46 @@ var moveroses = setInterval(() => {
     }
   }
 }, 450);
+
+
+// We'll use these variables to track the counts of each player
+let sb = 0      // Soccer Ball
+let oj = 0      // OJ
+let apple = 0   // Apple
+
+// Event listener for clicks on the "+" button for Ginger Bread cookies
+document.getElementById('add-sb').addEventListener('click', function () {
+    sb += 1;
+    document.getElementById('qty-sb').textContent = sb;
+})
+
+document.getElementById('minus-sb').addEventListener('click', function () {
+    if (sb >= 1) {
+        sb -= 1;
+        document.getElementById('qty-sb').textContent = sb;
+    }
+})
+
+document.getElementById('add-oj').addEventListener('click', function () {
+    oj += 1;
+    document.getElementById('qty-oj').textContent = oj;
+})
+
+document.getElementById('minus-oj').addEventListener('click', function () {
+    if (oj >= 1) {
+        oj -= 1;
+        document.getElementById('qty-oj').textContent = oj;
+    }
+})
+
+document.getElementById('add-apple').addEventListener('click', function () {
+  apple += 1;
+    document.getElementById('qty-apple').textContent = apple;
+})
+
+document.getElementById('minus-apple').addEventListener('click', function () {
+    if (apple >= 1) {
+      apple -= 1;
+        document.getElementById('qty-apple').textContent = apple;
+    }
+})
